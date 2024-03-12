@@ -1,5 +1,6 @@
-
+const mainBox = document.querySelector('#categories')
 const itemEl = document.querySelectorAll(".item");
+mainBox.classList.add('box');
 console.log(`Numbers of categories ${itemEl.length}`);
 
 // не потрібні зміни, так робити не треба
@@ -14,11 +15,16 @@ function showCategory(category) {
     console.log(`Category : ${titleCategory}`);
     // зайшов у console.dir(category); з textContent взяв заголовок
     // перед цим достукався до нього querySelector('h2')
-
+    
     let itemProduct = category.querySelectorAll('li');
     console.log(`Elements ${itemProduct.length}`);
-//
     
+    
+    itemProduct.forEach(item => {
+        item.classList.add('list_product')
+    });
+    category.querySelector('h2').classList.add('title');
+
 };
 
 
