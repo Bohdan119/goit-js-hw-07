@@ -29,12 +29,12 @@ const images = [
 ];
 
 const listElements = document.querySelectorAll(".gallery");
+const creatItemEl = document.createElement("li");
+creatItemEl.classList.add(".list_item")
 
 images.forEach(image => { 
-  const creatItemEl = document.createElement("li");
-  creatItemEl.classList.add(".list_item")
-
   const creatImgEl = document.createElement("img");
+
   creatImgEl.src = image.url;
   creatImgEl.alt = image.alt;
   creatImgEl.classList.add(".list_image")

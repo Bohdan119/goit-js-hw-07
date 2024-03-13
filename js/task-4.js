@@ -21,11 +21,18 @@ function handlerForm(evt) {
     const password = formElements.password.value;    
     if (email == ''){
         alert('PLEASE WRITE EMAIL');
+
     }
     if
         (password == ''){
         alert('PLEASE WRITE PASSWORD');
     }
 
+    const emailValue = formElements.email.value;
+    const passwordValue = formElements.password.value;
+
     evt.target.reset();
+    
+    formElements.email.value = emailValue;
+    formElements.password.value = passwordValue;
 };
