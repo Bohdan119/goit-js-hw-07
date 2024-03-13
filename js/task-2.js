@@ -29,23 +29,26 @@ const images = [
 ];
 
 const listElements = document.querySelectorAll(".gallery");
-const creatItemEl = document.createElement("li");
-creatItemEl.classList.add(".list_item")
 
-images.forEach(image => { 
+const items = images.map(image => {
+  
+  const creatItemEl = document.createElement("li");
+  creatItemEl.classList.add("list_item")
+
   const creatImgEl = document.createElement("img");
-
   creatImgEl.src = image.url;
   creatImgEl.alt = image.alt;
-  creatImgEl.classList.add(".list_image")
-
+  creatImgEl.classList.add("list_image")
+  
   creatItemEl.appendChild(creatImgEl);
-
-  listElements.forEach(listElement => {
-    listElement.appendChild(creatItemEl);
-  });
+  return creatItemEl;
 });
 
+listElements.forEach(listElement => {
+  items.forEach(item => {
+    listElement.appendChild(item);
+  });
+});
 
   
 
