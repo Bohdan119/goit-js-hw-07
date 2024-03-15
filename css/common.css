@@ -71,35 +71,18 @@ margin-left: 0px;
 }
 
 
-
-
-
-
-
-/* .gallery{
-list-style: none;
-
-display:flex;
-flex-wrap: wrap;
-gap: 30px;
-justify-content: center;
-
-
+/* TASK_02 */
+.gallery{
+width: auto;
 }
 
 .list_item{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-basis: calc((100% - 30px)/4);
+  list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .list_image{
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  
-} */
+  width: 360px;
+  height: 300px;
+}
